@@ -24,7 +24,9 @@ export function getList(addresses) {
             ${addresses.map(createRow).join("")}
           </tbody>
         </table>
-        <a href="/new">Create New Record</a>
+        <div class="footer">
+        <a href="/new" class="create__btn">Create New Record</a>
+        </div>
       </body>
     </html>`;
 }
