@@ -1,0 +1,13 @@
+table {
+  border-spacing: 0;
+}
+td {
+  width: 80px;
+}
+tr:first-child th {
+  font-weight: bold;
+  text-align: left;
+}
+tr:nth-child(2n) td {
+  background-color: lightgrey;
+}
