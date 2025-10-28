@@ -1,12 +1,17 @@
 import { createServer } from "http";
 import { parse } from "querystring";
-import { readFile, rename } from "fs";
+import { readFileSync, readFile, rename, realpathSync } from "fs";
 import formidable from "formidable";
 import data from "./data.js";
 import { getList } from "./list.js";
 import { deleteAddress } from "./delete.js";
 import { getForm } from "./form.js";
 import { saveAddress } from "./save.js";
+
+// const options = {
+//   key: readFileSync("./localhost.key"),
+//   cert: realpathSync("./localhost.cert"),
+// };
 
 createServer(async (request, response) => {
   const parts = request.url.split("/");
